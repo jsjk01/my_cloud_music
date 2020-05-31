@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>播放页</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/play.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 唱针 -->
+        <div class="niddle"></div>
+        <!-- 唱片 -->
+        <div class="album-info">
+            <div class="disc roll paused" >
+                <div class="album-img">
+                    
+                </div>
+            </div> 
+            <!-- 歌词 -->
+            <div class="song-lrc">
+                <h2>歌曲名</h2>
+                <p id="lyric-text"></p>
+            </div>
+        </div>
+        
+        
+        
+        <!-- 毛玻璃背景 -->
+        <div class="blur-img">
+            <img src="/img/album.jpg" alt="">
+        </div>
+
+        <!-- 音频文件 -->
+        <div class="play">
+            <audio id="music" src=""></audio>
+        </div>
+        <!-- 音乐播放进度条 -->
+        <div class="range-container">
+            <input type="range" id="range-bar" value="0" class="custom-range">
+        </div>
+        
+    </div>
+</body>
+<script src="/node_modules/lyric-parser/dist/lyric.js"></script>
+<script src="/node_modules/axios/dist/axios.js"></script>
+<script src="/js/play.js"></script>
+</html>

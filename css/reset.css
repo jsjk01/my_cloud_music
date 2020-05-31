@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    resize: none;
+    -webkit-tap-highlight-color: transparent;
+    list-style: none;
+    outline: none;
+    text-decoration: transparent;
+}
+
+html,body{
+    height: 100%;
+}
+h2{
+    font-weight: 400;
+}

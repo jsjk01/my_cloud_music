@@ -1,0 +1,374 @@
+/* 顶部栏 */
+.header{
+    height: 84px;
+    background-color: #D43C33;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    /* 上下为0，左右为15 */
+}
+/* logo */
+.topsvg{
+    width: 142px;
+    height: 25px;
+}
+/* 下载按钮 */
+.download-button{
+    width: 100px;
+    height: 36px;
+    border-radius: 20px;
+    border: none;
+    background-color: white;
+    color: #D43C33;
+    text-align: center;
+    line-height: 36px;
+}
+
+/* Tab控制栏样式 */
+.tab{
+    width: 100%;
+    display: flex;
+    border: 1px solid #fff;
+}
+.tabItem{
+    flex: 1;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+/* Tab容器 */
+.content{
+    width: 100%;
+    overflow: hidden;
+}
+/* Tab容器>content */
+.inner{
+    width: 300%;
+    transition: margin-left 0.4s;
+}
+/* Tab容器>content>内容 */
+.screen{
+    width: 33.33333%;
+    float: left;
+}
+/* input-radio属性 */
+input[type="radio"]{
+    display: none;
+}
+
+/* Tab切换 */
+/* 样式 */
+#rec:checked~.tab>label:nth-child(1){
+    color: #D43C33;
+    font-weight: bold;
+    border-bottom: 1px solid #D43C33;
+}
+/* 切换内容 */
+#rec:checked~.content>.inner{
+    margin-left: 0%;
+}
+/* 样式 */
+#hot:checked~.tab>label:nth-child(2){
+    color: #D43C33;
+    font-weight: bold;
+    border-bottom: 1px solid #D43C33;
+}
+/* 切换内容 */
+#hot:checked~.content>.inner{
+    margin-left: -100%;
+   
+}
+/* 样式 */
+#search:checked~.tab>label:nth-child(3){
+    color: #D43C33;
+    font-weight: bold;
+    border-bottom: 1px solid #D43C33;
+}
+/* 切换内容 */
+#search:checked~.content>.inner{
+    margin-left: -200%;
+}
+
+/* 推荐音乐 */
+.rec-song>ul{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+body{
+    font: 14px/1.5 Helvetica,sans-serif,STHeiTi;
+    color: #333;
+    outline: 0;
+}
+.remd_tl{
+    position: relative;
+    padding-left: 9px;
+    margin-bottom: 14px;
+    font-size: 17px;
+    height: 20px;
+    line-height: 20px;
+}
+
+.remd_tl:after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -9px;
+    width: 2px;
+    height: 16px;
+    background-color: #d33a31;
+}
+h2{
+    font-weight: 400;
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+.rec-song>ul>li{
+    padding: 2px;
+    width: 33.33%;
+    margin-bottom: 15px;
+}
+
+.rec-song>ul>li>img{
+    width: 100%;
+}
+
+.rec-song>ul>li>p{
+    text-align: left;
+    font-size: 13px;
+}
+
+
+/* 最新音乐样式 */
+.newSong a{
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    height: 48px;
+    border-bottom: 1px solid #f8f3eb;
+}
+
+.newSong li{
+    padding-left: 20px;
+}
+
+.song-title-container{
+    width: 90%; 
+    display: flex;
+    justify-content: flex-start;
+}
+
+.song-title>p{
+    margin-top: 3px;
+    width: 100%;
+    color: #333;
+    margin-right: 10px;
+}
+
+.song-des{
+    margin-top: 3px;
+    flex: 1;
+    overflow: hidden;
+    color: grey;
+    white-space: nowrap;
+}
+
+.song-des>p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.singer{
+    width: 85%;
+    font-size: 13px;
+    color: grey;
+    /* 超出显示范围用...代替 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.play-icon{
+    width: 22px;
+    height: 22px;
+    background: url(/img/index_icon_2x.png) no-repeat;
+    background-size: 166px 97px;
+    background-position: -24px 0;
+    position: relative;
+    right: -10px; 
+    top: 50%; 
+    transform: translateY(50%);
+}
+
+.sqicon{
+    width: 12px;
+    height: 8px;
+    background: url(/img/index_icon_2x.png) no-repeat;
+    background-size: 166px 97px;
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateY(-20%);
+    margin-right: 5px;
+}
+
+/* 搜索栏 */
+.search-bar{
+    height: 60px;
+    padding: 15px 10px;
+}
+
+.search-bar>input[type="text"]{
+    height: 30px;
+    width: 100%;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background: rgb(230, 230, 230);
+    padding: 0 10px;
+}
+
+.search-rem,.search-res{
+    display: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.search-def{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.search-def>h2{
+    font-size: 14px;
+    font-weight: normal;
+
+}
+
+/* 热门搜索 */
+.hot-key{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hot-key>span{
+    padding: 4px 7px;
+    font-size: 13px;
+    margin: 0 8px 10px 0;
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 35px;
+    display: block;
+}
+
+.search-list>li{
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid rgb(230, 230, 230);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-res>ol>li{
+    height: 66px;
+    border-bottom: 1px solid rgb(230, 230, 230);
+    display: flex;
+    align-items: center;
+}
+.search-res>ol>li>img{
+    width: 50px;
+    height: 50px;
+}
+
+.search-res>ol>li>p{
+    margin-left: 16px;
+    font-size: 16px;
+    width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* 热歌榜 */
+.hotop{
+    background: url(/img/hot_music_bg_2x.jpg) no-repeat;
+    background-size: contain;
+    padding-top: 38.9%;
+    overflow: hidden;
+    position: relative;
+}
+.m-hmhot,.hotop:after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: rgba(0,0,0,.2);
+}
+.hotopct{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding-left: 20px;
+    box-sizing: border-box;
+    z-index: 1333;
+}
+.u-hmsprt{
+    background: url(/img/index_icon_2x.png) no-repeat;
+    background-size: 166px 97px;
+}
+
+.m-hmhot,.hoticon {
+    width: 142px;
+    height: 67px;
+    background-position: -24px -30px;
+}
+
+.m-hmhot,.hottime {
+    margin-top: 10px;
+    color: hsla(0,0%,100%,.8);
+    font-size: 12px;
+    -webkit-transform: scale(.91);
+    -ms-transform: scale(.91);
+    transform: scale(.91);
+    -webkit-transform-origin: left top;
+    -ms-transform-origin: left top;
+    transform-origin: left top;
+}
+
+.hotsong a{
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    height: 48px;
+    border-bottom: 1px solid #f8f3eb;
+}
+
+.hotsong li{
+    padding-left: 40px;
+}
+
+.num{
+    position: absolute;
+    transform: translate(40%,50%);
+    font-size: 17px;
+    text-align: center;
+    color: #999
+}
+/* 排名前三标记 */
+.num-red{
+    color: #df3436;
+}

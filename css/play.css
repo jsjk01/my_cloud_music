@@ -1,0 +1,320 @@
+/* 主容器 */
+.container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 唱针 | 位置：绝对*/
+.niddle{
+    width: 84px;
+    height: 122px;
+    background:url(/img/needle-ip6.png);
+    background-size: cover;
+    position: absolute;
+    z-index: 1005;
+    left: 50%;
+}
+
+
+/* 唱片信息 = 黑胶唱片 + 专辑图片 | 位置：绝对*/
+.album-info{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1000;
+}
+
+/* 黑胶唱片背景 */
+.disc{
+    width: 70%;
+    padding-top: 70%;
+    background: url(/img/disc-ip6.png);
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 50px;
+    background-size: cover;
+    position: relative;
+}
+
+/* 专辑图片 */
+.album-img{
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+}
+
+.album-img>img{
+    width: 100%;
+}
+
+/* 毛玻璃背景 */
+.blur-img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 995;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    filter: blur(12px) brightness(0.55);
+}
+
+.blur-img>img{
+    height: 100%;
+    /* position: relative; */
+    top: -30px;
+}
+
+
+/* 歌词效果 = 歌曲名 + 歌词*/
+.song-lrc{
+    /* 子绝父相 */
+    position: absolute;
+    z-index: 996;
+    align-self: center;
+    padding: 0 35px;
+    padding-top: 90%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+/* 歌曲名样式 */
+.song-lrc>h2{
+    text-align: center;
+    color: white;
+    font-size: 13px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-bottom: 12px;
+}
+
+/* 歌词样式 */
+.song-lrc>p{
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    
+}
+
+/* 播放指示 */
+.play{
+    position: absolute;
+    left: 44%;
+    width: 44px;
+    height: 44px;
+    background: url(/img/index_icon_2x.png) no-repeat;
+    background-size: 332px 194px;
+    background-position: -48px 0;
+    transform: translateY(390%);
+    z-index: 13334;
+}
+
+
+
+/* 旋转动画 */
+@keyframes an{
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+.roll{
+    animation: an 20s linear infinite;
+}
+
+
+/* 播放：旋转 */
+.playing{
+    animation-play-state: running;
+}
+/* 暂停：停止旋转 */
+.paused{
+    animation-play-state: paused;
+}
+
+b{
+    font-size: 16px;
+}
+
+/* 进度条 */
+
+.range-container{
+    padding: 15px;
+    height: 50px;
+    width: 100%;
+    transform: translateY(1000%);
+    position: absolute;
+    z-index: 1333;
+}
+
+/* 进度条自定义样式 */
+.custom-range {
+    width: 100%;
+    height: 1.4rem;
+    padding: 0;
+    background-color: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  
+  .custom-range:focus {
+    outline: none;
+  }
+  
+  .custom-range:focus::-webkit-slider-thumb {
+    box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+  .custom-range:focus::-moz-range-thumb {
+    box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+  .custom-range:focus::-ms-thumb {
+    box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+  .custom-range::-moz-focus-outer {
+    border: 0;
+  }
+  
+  .custom-range::-webkit-slider-thumb {
+    width: 1rem;
+    height: 1rem;
+    margin-top: -0.25rem;
+    background-color: #d33a31;
+    border: 0;
+    border-radius: 1rem;
+    -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .custom-range::-webkit-slider-thumb {
+      -webkit-transition: none;
+      transition: none;
+    }
+  }
+  
+  .custom-range::-webkit-slider-thumb:active {
+    background-color: #b3d7ff;
+  }
+  
+  .custom-range::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 0.5rem;
+    color: transparent;
+    cursor: pointer;
+    background-color: #dee2e6;
+    border-color: transparent;
+    border-radius: 1rem;
+  }
+  
+  .custom-range::-moz-range-thumb {
+    width: 1rem;
+    height: 1rem;
+    background-color: #007bff;
+    border: 0;
+    border-radius: 1rem;
+    -moz-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .custom-range::-moz-range-thumb {
+      -moz-transition: none;
+      transition: none;
+    }
+  }
+  
+  .custom-range::-moz-range-thumb:active {
+    background-color: #b3d7ff;
+  }
+  
+  .custom-range::-moz-range-track {
+    width: 100%;
+    height: 0.5rem;
+    color: transparent;
+    cursor: pointer;
+    background-color: #dee2e6;
+    border-color: transparent;
+    border-radius: 1rem;
+  }
+  
+  .custom-range::-ms-thumb {
+    width: 1rem;
+    height: 1rem;
+    margin-top: 0;
+    margin-right: 0.2rem;
+    margin-left: 0.2rem;
+    background-color: #007bff;
+    border: 0;
+    border-radius: 1rem;
+    -ms-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    appearance: none;
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .custom-range::-ms-thumb {
+      -ms-transition: none;
+      transition: none;
+    }
+  }
+  
+  .custom-range::-ms-thumb:active {
+    background-color: #b3d7ff;
+  }
+  
+  .custom-range::-ms-track {
+    width: 100%;
+    height: 0.5rem;
+    color: transparent;
+    cursor: pointer;
+    background-color: transparent;
+    border-color: transparent;
+    border-width: 0.5rem;
+  }
+  
+  .custom-range::-ms-fill-lower {
+    background-color: #dee2e6;
+    border-radius: 1rem;
+  }
+  
+  .custom-range::-ms-fill-upper {
+    margin-right: 15px;
+    background-color: #dee2e6;
+    border-radius: 1rem;
+  }
+  
+  .custom-range:disabled::-webkit-slider-thumb {
+    background-color: #adb5bd;
+  }
+  
+  .custom-range:disabled::-webkit-slider-runnable-track {
+    cursor: default;
+  }
+  
+  .custom-range:disabled::-moz-range-thumb {
+    background-color: #adb5bd;
+  }
+  
+  .custom-range:disabled::-moz-range-track {
+    cursor: default;
+  }
+  
+  .custom-range:disabled::-ms-thumb {
+    background-color: #adb5bd;
+  }
