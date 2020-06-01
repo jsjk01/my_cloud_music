@@ -269,6 +269,7 @@ h2{
 .search-list>li{
     height: 30px;
     line-height: 30px;
+    width: 95%;
     border-bottom: 1px solid rgb(230, 230, 230);
     display: flex;
     justify-content: space-between;

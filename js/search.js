@@ -113,8 +113,7 @@ function getLocalInfo(){
         str += 
         `
         <li>
-            <p>${keyWord[i]}</p>
-            <span onclick="delInfo(${i})">x</span>
+            <p onclick="changeTempWord(\'${keyWord[i]}\')">${keyWord[i]}</p><span onclick="delInfo(${i})">x</span>
         </li>
         `
     }
@@ -164,6 +163,7 @@ function searchRem(){
 // 切换搜索结果关键词并渲染
 function changeTempWord(text){
     tempWord = text
+    searchInput.value = text
     showContainer(document.querySelector(".search-res"))
     searchResult()
 }
