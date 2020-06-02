@@ -9,6 +9,7 @@ searchInput.onfocus = function () {
         if (searchInput.value == "") {
             showContainer(document.querySelector(".search-def"))
             getLocalInfo()
+
         } else {
             if (e.keyCode == 13) {
                 showContainer(document.querySelector(".search-res"))
@@ -65,9 +66,7 @@ function searchResult() {
                                             <div class="song-title">
                                                 <p>${songArr[i].name}</p>
                                             </div>
-                                            <div class="song-des">
-                                            
-                                        </div>
+                                            <div class="song-des"></div>
                                         <div class="play-icon"></div>
                                     </div>                        
                                         <div class="singer">
@@ -80,7 +79,8 @@ function searchResult() {
             }
             albumStrBox.innerHTML = albumStr
             songListBox.innerHTML = songListStr
-
+            console.log(document.querySelector(".search").style.height)
+            changeHeight(document.querySelector(".search"), document.querySelector(".screen").parentNode.parentNode)
         }))
 }
 
