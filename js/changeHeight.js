@@ -6,7 +6,5 @@ for (let i = 0; i < taBtn.length; i++) {
     }
 }
 function changeHeight(obj,target) {
-    console.log(obj.offsetHeight)
     target.style.height = obj.offsetHeight + "px"
-    console.log(target.style.height)
 }

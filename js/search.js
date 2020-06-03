@@ -43,14 +43,17 @@ function searchResult() {
             let songListBox = document.querySelector(".search-res>ul")
 
             let albumStr = ``
+            let artistStr = ``
             let songListStr = ``
             let songArr = songlistData.data.result.songs
 
-            albumStr = (alblmData.data.result.artist && alblmData.data.result.album) ? `
+            artistStr = alblmData.data.result.artist ? `
                         <li>
                             <img src="${alblmData.data.result.artist[0].picUrl}" alt="">
                             <p>${alblmData.data.result.artist[0].name}</p>
                         </li>
+                        ` : ``
+            albumStr = alblmData.data.result.album ? `
                         <li>
                             <img src="${alblmData.data.result.album[0].picUrl}" alt="">
                             <p>${alblmData.data.result.album[0].name}</p>
@@ -77,9 +80,8 @@ function searchResult() {
                                 </a>
                                 `
             }
-            albumStrBox.innerHTML = albumStr
+            albumStrBox.innerHTML = artistStr + albumStr
             songListBox.innerHTML = songListStr
-            console.log(document.querySelector(".search").style.height)
             changeHeight(document.querySelector(".search"), document.querySelector(".screen").parentNode.parentNode)
         }))
 }

@@ -89,12 +89,6 @@ input[type="radio"]{
     margin-left: -200%;
 }
 
-/* 推荐音乐 */
-.rec-song>ul{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
 
 body{
     font: 14px/1.5 Helvetica,sans-serif,STHeiTi;
@@ -130,17 +124,29 @@ h2{
     margin-inline-end: 0px;
     font-weight: bold;
 }
-.rec-song>ul>li{
-    padding: 2px;
-    width: 33.33%;
-    margin-bottom: 5px;
+/* 推荐音乐 */
+.rec-song{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.rec-song>a{
+    width: 32.5%;
+    display: block;
+    text-decoration: none;
+    color: #333;
 }
 
-.rec-song>ul>li>img{
+.song-item{
     width: 100%;
 }
 
-.rec-song>ul>li>p{
+.song-item>img{
+    width: 100%;
+}
+
+.song-item>p{
     text-align: left;
     font-size: 13px;
 }

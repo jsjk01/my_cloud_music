@@ -9,12 +9,16 @@ fetch("http://localhost:3000/personalized",{
 })
 // 渲染推荐歌单
 .then(function(data){
-    let box = document.querySelector("#rec-song-group")
+    let box = document.querySelector(".rec-song")
     for(i = 0; i < data.result.slice(1,7).length; i ++){
         box.innerHTML += //动态添加元素
-        `<li>
-            <img src="${data.result[i+1].picUrl}" alt="">
-            <p>${data.result[i+1].name}</p>
-        </li>`
+        `
+        <a href="recSong.html?id=${data.result[i+1].id}">
+            <div class="song-item">
+                <img src="${data.result[i+1].picUrl}" alt="">
+                <p>${data.result[i+1].name}</p>
+            </div>
+        </a>
+        `
     }
 })

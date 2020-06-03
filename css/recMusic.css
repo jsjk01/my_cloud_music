@@ -1,0 +1,160 @@
+header{
+    width: 100%;
+    height: 174px;
+    position: relative;
+}
+
+.info{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 10;
+    justify-content: space-between;
+    padding: 20px 10px;
+}
+
+.song-img{
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.song-img>img{
+    width: 80%;
+    max-width: 130px;
+}
+
+.song-text{
+    flex: 3;
+    padding-left: 15px;
+}
+
+.song-text>h2{
+    color: white;
+    font-weight: normal;
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+.song-text>p{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    color: white;
+}
+
+.avatar{
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    border-radius: 50px;
+}
+.avatar>img{
+    width: 100%;
+}
+
+.bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 9;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg>img{
+    width: 120%;
+    filter: blur(20px);
+}
+
+
+
+.hotsong a{
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    height: 48px;
+    z-index: 13;
+    border-bottom: 1px solid #f8f3eb;
+}
+
+.hotsong li{
+    padding-left: 40px;
+}
+
+.num{
+    position: absolute;
+    transform: translate(40%,50%);
+    font-size: 17px;
+    text-align: center;
+    color: #999
+}
+/* 排名前三标记 */
+.num-red{
+    color: #df3436;
+}
+
+.song-title-container{
+    width: 90%; 
+    display: flex;
+    justify-content: flex-start;
+}
+
+.song-title>p{
+    margin-top: 3px;
+    width: 100%;
+    color: #333;
+    margin-right: 10px;
+}
+
+.song-des{
+    margin-top: 3px;
+    flex: 1;
+    overflow: hidden;
+    color: grey;
+    white-space: nowrap;
+}
+
+.song-des>p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.singer{
+    width: 85%;
+    font-size: 13px;
+    color: grey;
+    /* 超出显示范围用...代替 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.play-icon{
+    width: 22px;
+    height: 22px;
+    background: url(/img/index_icon_2x.png) no-repeat;
+    background-size: 166px 97px;
+    background-position: -24px 0;
+    position: relative;
+    right: -10px; 
+    top: 50%; 
+    transform: translateY(50%);
+}
+
+.sqicon{
+    width: 12px;
+    height: 8px;
+    background: url(/img/index_icon_2x.png) no-repeat;
+    background-size: 166px 97px;
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateY(-20%);
+    margin-right: 5px;
+}
