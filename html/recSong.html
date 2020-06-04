@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/css/recMusic.css">
 </head>
 <body>
+    <!-- 头部信息 -->
     <header>
         <div class="info">
             <div class="song-img">
@@ -27,6 +28,21 @@
         </div>
         
     </header>
+    <!-- 标签详情 -->
+    <div class="introduction">
+        <div class="inner">
+            <div class="introduction-title">
+                标签：
+            </div>
+            <div class="introduction-text">
+                简介：<p>
+                
+                    </p>
+                <img src="/img/array.png" alt="" onclick="show($('.inner'))"> 
+            </div>
+        </div>
+        
+    </div>
     <div class="hotsong">
         <ul>
             <span class="num">01</span>
@@ -35,5 +51,6 @@
     </div>
 </body>
 <script src="/node_modules/axios/dist/axios.js"></script>
+<script src="/js/getElement.js"></script>
 <script src="/js/recMusicDetail.js"></script>
 </html>

@@ -4,7 +4,7 @@ function getSongDetail(){
 function songComment(){
     return axios.get("http://localhost:3000/comment/playlist" + location.search)
 }
-
+// 并发处理歌单详情
 axios.all([getSongDetail(),songComment()])
 .then(axios.spread(function(songDetailData,songCommentData){
     let songImg = document.querySelector(".song-img>img")
@@ -52,4 +52,44 @@ axios.all([getSongDetail(),songComment()])
     let box = document.querySelector(".hotsong>ul")
     box.innerHTML = str
 
+    // 标签与简介处理
+    let tags = songDetailData.data.playlist.tags
+    let des = songDetailData.data.playlist.description
+
+    let reg = /\n/g
+    let desStr = des.replace(reg,"<br>")
+    let tagStr = ``
+    for(i = 0; i < tags.length; i ++){
+        tagStr += `<span>${tags[i]}</span>`
+    }
+    $(".introduction-title").innerHTML += tagStr
+    $(".introduction-text>p").innerHTML = desStr
+    initHeight()
+    
 }))
+
+// 简介的显示与折叠
+let num = 0
+function show(obj){
+    num ++
+    if(num % 2 ==1){
+        obj.style.height = "auto"
+        obj.parentNode.style.height = "auto"
+        $(".introduction-text>img").classList.remove("down")
+        $(".introduction-text>img").classList.add("up")
+    }else{
+        obj.style.height = heightTemp + "px"
+        obj.parentNode.style.height = (heightTemp + 5) + "px"
+        $(".introduction-text>img").classList.remove("up")
+        $(".introduction-text>img").classList.add("down")
+    }
+}
+// 初始化inner高度
+let heightTemp
+function initHeight(){
+    $('.inner').style.height = "auto"
+    heightTemp = $('.inner').offsetHeight
+    $('.inner').style.height = (heightTemp > 120) ? "120px" : "auto"
+    $('.inner').parentNode.style.height = (heightTemp > 120) ? "135px" : (heightTemp + 5) + "px"
+    heightTemp = (heightTemp > 120) ? 120 : heightTemp
+}

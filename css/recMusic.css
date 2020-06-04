@@ -158,3 +158,48 @@ header{
     transform: translateY(-20%);
     margin-right: 5px;
 }
+
+.introduction{
+    height:135px;
+    color: gray;
+    position: relative;
+}
+.inner{
+    height: 120px;
+    padding: 10px;
+    overflow: hidden;
+}
+.introduction-title{
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.introduction-title>span{
+    border: 1px solid rgb(233, 233, 233);
+    border-radius: 12px;
+    padding: 4px 9px;
+    margin-right: 5px;
+}
+
+.introduction-text{
+    line-height: 20px;
+}
+
+.introduction-text>img{
+    position: absolute;
+    filter: opacity(45%);
+    width: 20px;
+    height: 20px;
+    right: 1px;
+    bottom: 1px;
+    transition: transform 0.4s;
+}
+
+
+.up{
+    transform: rotate(180deg);
+}
+
+.down{
+    transform: rotate(0deg);
+}
