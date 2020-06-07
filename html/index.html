@@ -6,6 +6,7 @@
     <title>网易云音乐</title>
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <!-- 顶部栏 -->
@@ -79,7 +80,23 @@
                 <div class="hotsong">
                     <ul>
                         <span class="num">01</span>
-                        
+                        <a href="play.html?id=${data.playlist.trackIds[i].id}">
+                            <li>
+                                <div class="song-title-container">
+                                    <div class="song-title">
+                                        <p>${data.playlist.tracks[i].al.name}</p>
+                                    </div>
+                                    <div class="song-des">
+                                        <p></p>
+                                    </div>
+                                    <div class="play-icon"></div>
+                                </div>
+            
+                                <div class="singer">
+                                    <span class="sqicon"></span>${des}
+                                </div>
+                            </li>
+                        </a>
                     </ul>
                 </div>
             </div>
