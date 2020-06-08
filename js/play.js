@@ -77,7 +77,7 @@ axios.all([getAddress(),getAlbumImg(),getSongLrc()])
                 }
             }
         }
-
+        playOrPause()
         // 歌词滚动
         let lyric_text = [];
         let count = 0;
