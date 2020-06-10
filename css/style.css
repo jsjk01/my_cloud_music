@@ -95,6 +95,7 @@ body{
     color: #333;
     outline: 0;
 }
+
 .remd_tl{
     position: relative;
     padding-left: 9px;
@@ -128,14 +129,18 @@ h2{
 .rec-song{
     width: 100%;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+}
+.rec-song>a{
+    padding-left: 1px;
+    padding-right: 1px;
 }
 .rec-song>a{
     width: 32.5%;
     display: block;
     text-decoration: none;
     color: #333;
+    margin-bottom: 16px;
 }
 
 .song-item{
