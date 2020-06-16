@@ -1,0 +1,168 @@
+.mv-info{
+    padding: 7px 5px;
+    display: flex;
+    height: 32px;
+}
+.mv-icon{
+    width: 29px;
+    height: 18px;
+    background: url(/img/icon2.png);
+    background-position: -230px -480px;
+    margin-right: 5px;
+}
+
+h2 {
+    float: left;
+    max-width: 100%;
+    margin-top: -4px;
+    margin-right: 8px;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: normal;
+}
+
+p{
+    color: #0c73c2;
+}
+
+.u-smtitle {
+    height: 23px;
+    line-height: 23px;
+    padding: 0 10px;
+    font-size: 12px;
+    color: #666;
+    background-color: #eeeff0;
+}
+.comment{
+    border-bottom: 1px solid rgb(233, 233, 233);
+}
+
+.user-cmt{
+    padding-top: 10px;
+    display: flex;
+    position: relative;
+}
+
+.user-head{
+    height: 35px;
+    margin: 0 10px;
+    flex: none;
+}
+
+.user-head>a{
+    display: block;
+    text-decoration: none;
+}
+
+.user-head img{
+    margin-left: 5px;
+    border: 0;
+    display: block;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.cmt_header{
+    padding-left: 0;
+}
+
+.cmt_wrap {
+    padding-right: 10px;
+    padding-bottom: 11px;
+    padding-left: 10px;
+    flex: auto;
+    width: 0;
+    /* display: flex; */
+}
+
+.cmt_header{
+    display: flex;
+    flex-direction: row;
+}
+
+.cmt_meta {
+    -webkit-flex: auto;
+    -webkit-box-flex: 1;
+    flex: auto;
+    width: 0;
+    font-size: 0;
+}
+
+.cmt_user {
+    max-width: 100%;
+    display: inline-flex;
+    align-items: center;
+}
+
+.cmt_user a {
+    font-size: 14px;
+    color: #666;
+    line-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-box-flex: 1;
+    -webkit-flex: auto;
+    flex: auto;
+}
+
+.cmt_time {
+    font-size: 9px;
+    color: #999;
+}
+
+.cmt_like {
+    width: 65px;
+    height: 22px;
+    line-height: 22px;
+    font-size: 11px;
+    color: #999;
+    -webkit-flex: none;
+    -webkit-box-flex: 0;
+    flex: none;
+    text-align: right;
+}
+.cmt_likearea {
+    display: inline-block;
+    min-width: 30px;
+    padding-left: 5px;
+}
+.cmt_count {
+    vertical-align: middle;
+}
+.cmt_likeicn {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-left: 6px;
+    line-height: 0;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.cmt_content {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 15px;
+    line-height: 22px;
+    margin-top: -10px;
+    padding-left: 65px;
+    padding-right: 20px;
+        
+}
+.cmt_text {
+    vertical-align: middle;
+    
+}
+
+
+.white_content {
+    display: none;
+    overflow: auto;
+    margin-left: 20%;
+}
+
+.sub{
+    margin-left: 45%;
+}

@@ -49,8 +49,8 @@ axios.all([getSongDetail(),songComment()])
     }
 
     // 写入网页
-    $(".introduction-title").innerHTML += tagStr
-    $(".introduction-text>p").innerHTML = desStr
+    document.querySelector(".introduction-title").innerHTML += tagStr
+    document.querySelector(".introduction-text>p").innerHTML = desStr
     
 
     let str = ''// 定义空字符串，接收HTML模板
@@ -137,7 +137,7 @@ axios.all([getSongDetail(),songComment()])
             </div>
             `
     });
-    $(".comments").innerHTML = commentStr
+    document.querySelector(".comments").innerHTML = commentStr
     
 }))
 
@@ -164,13 +164,13 @@ function initHeight(){
      * 动态设置inner和content元素高度
      */
     // 先将inner设置为自动扩展，以检测目前需要怎样的高度才能够容纳所有内容
-    $('.inner').style.height = "auto"
+    document.querySelector('.inner').style.height = "auto"
     // 将扩展到最大的inner的高度储存到heightTemp
-    heightTemp = $('.inner').offsetHeight
+    heightTemp = document.querySelector('.inner').offsetHeight
     // 如果heightTemp比120大，就将inner的高度设置为120px，否则就让它自由扩展，总之都这么小了
-    $('.inner').style.height = (heightTemp > 120) ? "120px" : "auto"
+    document.querySelector('.inner').style.height = (heightTemp > 120) ? "120px" : "auto"
     // 父级元素处理方式同上
-    $('.inner').parentNode.style.height = (heightTemp > 120) ? "135px" : (heightTemp + 5) + "px"
+    document.querySelector('.inner').parentNode.style.height = (heightTemp > 120) ? "135px" : (heightTemp + 5) + "px"
     // 将heightTemp进行处理，不然上面的show(obj)就没办法按预期运行了
     heightTemp = (heightTemp > 120) ? 120 : heightTemp
 }

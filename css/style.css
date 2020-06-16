@@ -145,6 +145,7 @@ h2{
 
 .song-item{
     width: 100%;
+    height: 100%;
 }
 
 .song-item>img{
@@ -154,6 +155,7 @@ h2{
 .song-item>p{
     text-align: left;
     font-size: 13px;
+    margin-left: 2px;
 }
 
 
@@ -352,11 +354,7 @@ h2{
     margin-top: 10px;
     color: hsla(0,0%,100%,.8);
     font-size: 12px;
-    -webkit-transform: scale(.91);
-    -ms-transform: scale(.91);
     transform: scale(.91);
-    -webkit-transform-origin: left top;
-    -ms-transform-origin: left top;
     transform-origin: left top;
 }
 

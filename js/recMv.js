@@ -1,5 +1,5 @@
 // 获取推荐歌单
-fetch("http://localhost:3000/personalized",{
+fetch("http://localhost:3000/mv/first",{
     method: "get",
     mode:"cors"
 })
@@ -9,14 +9,14 @@ fetch("http://localhost:3000/personalized",{
 })
 // 渲染推荐歌单
 .then(function(data){
-    let box = document.querySelector(".rec-song")
-    for(i = 0; i < data.result.slice(1,7).length; i ++){
+    let box = document.querySelector(".rec-mv")
+    for(i = 0; i < data.data.slice(1,7).length; i ++){
         box.innerHTML += //动态添加元素
         `
-        <a href="recSong.html?id=${data.result[i].id}">
+        <a href="recMv.html?id=${data.data[i].id}">
             <div class="song-item">
-                <img src="${data.result[i].picUrl}" alt="">
-                <p>${data.result[i].name}</p>
+                <img src="${data.data[i].cover}" alt="">
+                <p>${data.data[i].name}</p>
             </div>
         </a>
         `
