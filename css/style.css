@@ -49,7 +49,7 @@
 }
 /* Tab容器>content>内容 */
 .screen{
-    width: calc(100% / 3);
+    width: 33.33%;
     float: left;
 }
 /* input-radio属性 */
